@@ -9,26 +9,27 @@ const clean = require("gulp-clean");
 const avif = require("gulp-avif");
 const webp = require("gulp-webp");
 const imagemin = require("gulp-imagemin");
+const cached = require("gulp-cached");
 const pug = require("gulp-pug");
 
 
 function html(){
     return src(['app/pug/*.pug'])
-    .pipe(pug({
-        pretty: true
-    }))
-    .pipe(dest("app"))
-    .pipe(browserSync.stream())
+        .pipe(pug({
+            pretty: true
+        }))
+        .pipe(dest("app"))
+        .pipe(browserSync.stream())
 }
 
 function images(){
     return src(['app/images/*.{png,jpg}'])
-    .pipe(avif({quality : 50}))
-    .pipe(src('app/images/*.*'))
-    .pipe(webp())
-    .pipe(src('app/images/*.*'))
-    .pipe(imagemin())
-    .pipe(dest('app/images'))
+        .pipe(avif({quality : 50}))
+        .pipe(src('app/images/*.*'))
+        .pipe(webp())
+        .pipe(src('app/images/*.*'))
+        .pipe(imagemin())
+        .pipe(dest('app/images'))
 }
 
 
@@ -52,7 +53,7 @@ function scripts(){
 function watching(){
     browserSync.init({
         server: {baseDir: "app/"},
-        });
+    });
     watch(["app/scss/**/*.scss"], styles)
     watch(["app/js/main.js"], scripts)
     watch(["app/pug/**/*.pug"], html)
@@ -72,7 +73,7 @@ function building(){
         'app/fonts/**/*',
         'app/images/**/*',
     ], {base: 'app'})
-    .pipe(dest("dist"))
+        .pipe(dest("dist"))
 }
 
 exports.html = html;
