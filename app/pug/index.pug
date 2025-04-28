@@ -2,5 +2,160 @@ doctype html
 html(lang="en")
     include includes/head/index.pug
     body 
-        h1 Привет мир!
-        
+        header.header__wrapper
+            .logo__wraper Craft
+            menu
+                ul.menu__wrapper
+                    li
+                        a.menu__item(href="#") consectetur
+                    li
+                        a.menu__item(href="#") sit amet
+                    li
+                        a.menu__item(href="#") eiusmod tempor
+
+        main
+            section.layout.layout-1
+                h1 SolidCraft
+                    br
+                    | Builders
+                h2 Turning visions into reality
+                .img__bg
+                    picture
+                        source(srcset="../images/layout-bg-1-mob.png" media="(max-width: 1366px)")
+                        img(srcset="../images/layout-bg-1.png")
+                .items__wrapper
+                    .item__wrapper
+                        .item__icon
+                            svg(viewBox="0 0 39 37" fill="none")
+                                use(href="../images/icons/icons.svg#checkedIcon")
+                        span.big Expert
+                        | craftsmanship guaranteed
+                    .item__wrapper
+                        .item__icon
+                            svg(viewBox="0 0 39 37" fill="none")
+                                use(href="../images/icons/icons.svg#checkedIcon")
+                        | Transparent
+                        span.big pricing policy
+                    .item__wrapper
+                        .item__icon
+                            svg(viewBox="0 0 39 37" fill="none")
+                                use(href="../images/icons/icons.svg#checkedIcon")
+                        | Fast
+                        span.big project
+                        | completion
+                button.btn Order
+            section.layout.layout-2
+                .img__bg
+                    picture
+                        source(srcset="../images/layout-2-bg-mob.png" media="(max-width: 1366px)")
+                        img(srcset="../images/layout-2-bg.png")
+                .items__wrapper
+                    .item__wrapper
+                        .item__icon
+                            svg(width="58" height="47" viewBox="0 0 58 47" fill="none")
+                                use(href="../images/icons/icons.svg#itemIcon")
+                        | Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor
+                    .item__wrapper
+                        .item__icon
+                            svg(width="58" height="47" viewBox="0 0 58 47")
+                                use(href="../images/icons/icons.svg#itemIcon")
+                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    .item__wrapper
+                        .item__icon
+                            svg(width="58" height="47" viewBox="0 0 58 47")
+                                use(href="../images/icons/icons.svg#itemIcon")
+                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    .item__wrapper
+                        .item__icon
+                            svg(width="58" height="47" viewBox="0 0 58 47" fill="none")
+                                use(href="../images/icons/icons.svg#itemIcon")
+                        | Lorem ipsum dolor amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    button.btn.btn-width-max Order
+                .img__bg
+                    picture
+                        source(srcset="../images/layout-2-bg-2-mob.png" media="(max-width: 1366px)")
+                        img(srcset="../images/layout-2-bg-2.png")
+            section.layout.layout-feedback
+                form.form__wrapper(action="#")
+                    h2 Consectetur
+                        br
+                        | sed do eiusmod
+                    .input__wrapper
+                        input(type="text" name="name" placeholder="Name")
+                    .input__wrapper
+                        input(type="email" name="email" placeholder="E-mail")
+                    label.checkbox__wrapper
+                        input(type="checkbox" name="policy")
+                        .checkbox__body
+                        .checkbox__text I accept Privacy policy
+                    button.btn.btn-black.btn-width-max Submit Form
+                .img__bg.img__bg-1
+                    picture
+                        source(srcset="../images/feedback-bg-2.png" media="(max-width: 1366px)")
+                        img(srcset="../images/feedback-bg-2.png")
+                .img__bg
+                    picture
+                        source(srcset="../images/feedback-bg.png" media="(max-width: 1366px)")
+                        img(srcset="../images/feedback-bg.png")
+        footer.footer__wrapper
+            menu
+                ul.menu__wrapper
+                    li
+                        a.menu__item(href="#") consectetur
+                    li
+                        a.menu__item(href="#") sit amet
+                    li
+                        a.menu__item(href="#") eiusmod tempor
+
+            .footer__row
+                .footer__cell
+                    .logo__wraper Craft
+                    span  © 2024, Copyright.
+                .footer__cell
+                    .social__items
+                        a(href="#").social__item
+                            svg
+                                use(href="../images/icons/icons.svg#instIcon")
+                        a(href="#").social__item
+
+                            svg
+                                use(href="../images/icons/icons.svg#ttIcon")
+                        a(href="#").social__item
+                            svg
+                                use(href="../images/icons/icons.svg#inIcon")
+                        a(href="#").social__item
+                            svg
+                                use(href="../images/icons/icons.svg#tgIcon")
+                        a(href="#").social__item
+                            svg
+                                use(href="../images/icons/icons.svg#youtubeIcon")
+                    a.link(href="#") Privacy policy
+                .footer__cell
+                    div
+                        button.btn Order
+                    a.link(href="#") Terms of Use
+        .test__block
+            .effect
+                video(id="background-video" autoplay loop muted poster="")
+                    source(src="./images/video.mp4" type="video/mp4")
+            .text__block
+                | We`re here
+                span.empty
+                |  to make
+                span.empty.empty-big
+                | healthy
+                span.empty
+                | living effortless so you can
+                span.empty.empty-big
+                | live longer sdvnlksndv
+                span.empty
+                | and happier sdvsmdmsdv
+                | We`re here  to make healthy
+
+        script(src="../js/main.js")
+
+
+
+
+
+

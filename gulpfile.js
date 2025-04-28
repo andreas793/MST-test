@@ -83,4 +83,4 @@ exports.watching = watching;
 exports.images = images;
 
 exports.build = series(cleanDist, building);
-exports.default = parallel(html, styles, scripts, watching, images);
+exports.default = parallel(html, styles, scripts, watching);
